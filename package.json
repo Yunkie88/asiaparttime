@@ -1,0 +1,24 @@
+{
+  "name": "asiaparttime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yunkie88/asiaparttime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yunkie88/asiaparttime/issues"
+  },
+  "homepage": "https://github.com/Yunkie88/asiaparttime#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.10"
+  }
+}

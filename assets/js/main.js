@@ -295,3 +295,32 @@ $('#clients-scroller').owlCarousel({
   }
 
 });
+
+/* ==========================================================================
+   Submit Job
+   ========================================================================== */
+
+    $(document).ready(function() {
+      var url = "http://localhost:8080";
+        $("#submit").click(function() {
+            var bill_Name = $("#billName").val();
+            var amt = $("#exampleInputAmount").val();
+            var duedate = $("#dueDate").val();
+            var billNo = $("#billNo").val();
+            var acctNo = $("#accountNo").val();
+            var frequency = $("#frequency").val();
+            var priority = $("#priority").val();
+            var sent = '{"Name":"' + bill_Name + '", "Amount":"' + amt + '","DueDate":"' + duedate + '","Bill_No":"' + billNo + '","Acct_No":"' + acctNo + '","Frequency":"' + frequency + '","Priority":"' + priority + '"}';
+            var endpoint= url + "/bill"
+            $.ajax({ 
+                url: endpoint,
+                type: "POST",
+                data: sent,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function() {
+                    alert('form sent')
+                }
+            })
+        });
+    });
